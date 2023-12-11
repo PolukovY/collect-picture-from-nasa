@@ -30,9 +30,9 @@ public class NasaCameraEntity {
     @Getter
     private String fullName;
 
-    @OneToMany(mappedBy = "nasaCamera", cascade = CascadeType.ALL)
+    @OneToMany(fetch = FetchType.EAGER, mappedBy = "nasaCamera", cascade = CascadeType.ALL)
     @Getter
-    private List<ImageEntity> images = new ArrayList<>();
+    private final List<ImageEntity> images = new ArrayList<>();
 
     public NasaCameraEntity() {
     }
