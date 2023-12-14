@@ -18,7 +18,7 @@ public class CollectNasaPictureController {
     private final CollectNasaFacade collectNasaFacade;
 
     @PostMapping("/pictures")
-    public @ResponseBody Map<NasaCamera, List<NasaImage>> collectNasaCameraToPictures(@RequestBody SolDto solDto) {
+    public Map<NasaCamera, List<NasaImage>> collectNasaCameraToPictures(@RequestBody SolDto solDto) {
         return collectNasaFacade.collectNasaCameraToPictures(solDto);
     }
 }

@@ -6,8 +6,7 @@ import com.levikorg.pictures.collect.repository.entity.NasaCameraEntity;
 import com.levikorg.pictures.nasa.model.NasaCamera;
 import com.levikorg.pictures.nasa.model.NasaImage;
 import jakarta.persistence.EntityManager;
-import jakarta.persistence.PersistenceContext;
-import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import org.hibernate.Session;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -17,14 +16,14 @@ import java.util.List;
 import java.util.Map;
 
 @Transactional
-@AllArgsConstructor
+@RequiredArgsConstructor
 @Service
 public class NasaService {
 
     private final NasaRepository nasaRepository;
 
-    @PersistenceContext
     private final EntityManager entityManager;
+
 
     public void saveNasaData(Map<NasaCamera, List<NasaImage>> cameraToPictures) {
         List<NasaCameraEntity> nasaCameraEntities = new ArrayList<>();

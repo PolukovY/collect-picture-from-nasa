@@ -4,14 +4,14 @@ import com.levikorg.pictures.collect.api.dto.SolDto;
 import com.levikorg.pictures.nasa.NasaClient;
 import com.levikorg.pictures.nasa.model.NasaCamera;
 import com.levikorg.pictures.nasa.model.NasaImage;
-import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@AllArgsConstructor
+@RequiredArgsConstructor
 @Component
 public class CollectNasaFacade {
 

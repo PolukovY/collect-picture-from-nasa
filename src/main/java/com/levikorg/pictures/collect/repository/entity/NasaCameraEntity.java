@@ -16,6 +16,7 @@ public class NasaCameraEntity {
     @Setter
     @Getter
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Setter
@@ -38,7 +39,6 @@ public class NasaCameraEntity {
     }
 
     public NasaCameraEntity(NasaCamera nasaCamera) {
-        this.id = nasaCamera.id();
         this.name = nasaCamera.name();
         this.fullName = nasaCamera.fullName();
         this.roverId = nasaCamera.roverId();

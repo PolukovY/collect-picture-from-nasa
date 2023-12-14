@@ -4,7 +4,7 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.levikorg.pictures.nasa.model.NasaCamera;
 import com.levikorg.pictures.nasa.model.NasaImage;
 import com.levikorg.pictures.nasa.properties.NasaProperties;
-import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponentsBuilder;
@@ -14,7 +14,7 @@ import java.util.stream.StreamSupport;
 
 
 @Component
-@AllArgsConstructor
+@RequiredArgsConstructor
 public class RestNasaClient implements NasaClient {
 
     private static final String PHOTOS = "photos";
